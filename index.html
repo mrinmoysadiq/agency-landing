@@ -337,6 +337,15 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
   .swipe-hint{display:none}
   .ai-demo .ai-facts{grid-template-columns:repeat(4,1fr);margin-top:28px}
 }
+
+/* agitate + solution */
+.agit-list{list-style:none;margin-top:22px;display:grid;gap:12px;max-width:720px}
+.agit-list li{position:relative;padding-left:34px;color:var(--ink);font-weight:500}
+.agit-list li::before{content:"";position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:#fde8e6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M7.5 7.5l7 7M14.5 7.5l-7 7' stroke='%23b42318' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") center/22px no-repeat}
+.agit-turn{margin-top:24px;font-size:19px;font-weight:700;color:var(--ink);max-width:720px;border-left:4px solid var(--lime);padding-left:14px}
+.youget{margin-top:22px;background:#fff;border:2px solid var(--ink);border-radius:var(--radius);padding:20px}
+.youget h3{margin-bottom:6px}
+.ai-proof{color:#fff;font-weight:600;margin-top:14px;max-width:720px}
 </style>
 </head>
 <body>
@@ -352,21 +361,21 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <h1>White Label Meta Ads, GHL and AI Booking for Your Agency's Clients</h1>
-      <p class="sub">You sell. We deliver it under your name. Your clients get booked appointments, not just leads, so they stay longer.</p>
-      <p class="trial-pill">Try 1 client account for $97 USD for the first month</p>
+      <h1>We Do Your Client Delivery. Under Your Agency Name.</h1>
+      <p class="sub">Meta ads, ad creatives, funnels, GHL and an AI appointment setter for every client you sign. Your clients get booked calls and stay longer. You get your time back to sell.</p>
+      <p class="trial-pill">Give us 1 client account for $97 USD for the first month</p>
       <p class="upwork-line"><span class="st">★★★★★</span><span>Ranked top Media Buyer in Bangladesh on <b>Upwork</b></span></p>
       <ul class="hero-points">
-        <li>Live in 7 days, inside your own GHL</li>
-        <li>Fully hidden, your brand on everything</li>
-        <li>No setup fee, no contract</li>
+        <li>Live in 7 days, built inside your own GHL</li>
+        <li>Your brand on everything. We never talk to your client</li>
+        <li>No setup fee. No contract</li>
       </ul>
     </div>
 
     <div class="form-card" id="start">
       <form id="leadForm" novalidate>
-        <h3>Start With One Account</h3>
-        <p class="note">We will contact you within 24 hours to set up your first client account.</p>
+        <h3>Claim Your $97 USD Trial</h3>
+        <p class="note">Tell us about your agency. We will call you within 24 hours and set up your first client account.</p>
         <div class="two">
           <div class="field">
             <label for="name">Your name</label>
@@ -427,38 +436,66 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
   </div>
 </div>
 
-<!-- UPWORK -->
-<section class="upw">
-  <div class="wrap upw-grid">
-    <div>
-      <h2>Ranked Top Media Buyer in Bangladesh on Upwork</h2>
-      <p class="lead">Upwork lists our founder first on its "Hire the best Media Buyers in Bangladesh" page. 5.0 star rating from 61 jobs.</p>
-    </div>
-    <button type="button" class="upw-shot" data-full="assets/proof-01.webp" data-title="Upwork, best Media Buyers in Bangladesh"><img src="assets/proof-01.webp" alt="Upwork page, best Media Buyers in Bangladesh, Mrinmoy S. listed first with 5.0 rating and 61 jobs" loading="lazy"></button>
-  </div>
-</section>
-
 <!-- PAIN -->
 <section class="alt">
   <div class="wrap">
-    <h2>Does This Sound Like Your Agency?</h2>
+    <h2>Running an Agency Should Not Feel Like This</h2>
     <ul class="pain-list">
-      <li>You close a new client, then you have to build everything yourself.</li>
-      <li>The ads bring leads, but the client does not call them back. Then they say the leads are bad.</li>
-      <li>Clients leave after 3 or 4 months, before the results really show.</li>
-      <li>You hired a freelancer. They were good for a month, then stopped replying.</li>
-      <li>You spend your day in GHL and Ads Manager, so you have no time to sell.</li>
-      <li>You worry a white label team will contact your client or send something with the wrong name on it.</li>
+      <li>You close a new client, then spend the next 2 weeks building their ads, funnel and GHL yourself.</li>
+      <li>Your client gets leads, but nobody calls them back fast. Then they tell you "the leads are bad."</li>
+      <li>Clients cancel in month 3 or 4, right when the campaigns start to work.</li>
+      <li>You hired a freelancer. Good for a month, then slow replies, then nothing.</li>
+      <li>You are in Ads Manager and GHL all day, so you have no time left to sell.</li>
     </ul>
-    <p class="turn">Most agencies do not lose clients because of price. They lose them because leads are not followed up and results are slow. We fix both.</p>
+  </div>
+</section>
+
+<!-- AGITATE -->
+<section>
+  <div class="wrap">
+    <h2>Every Client You Lose Costs You More Than One Retainer</h2>
+    <p class="lead">When a client cancels, you lose the monthly fee. You also lose the time and money you spent to win them, the referrals they would have sent and the case study that would have closed your next deal.</p>
+    <ul class="agit-list">
+      <li>You replace them by selling more, so you work more hours for the same money.</li>
+      <li>You can't take on new clients, because delivery already eats all your time.</li>
+      <li>One slow month for your client turns into a cancel email for you.</li>
+    </ul>
+    <p class="agit-turn">Your sales are not the problem. Delivery and lead follow-up are. That is exactly the part we take off your plate.</p>
+  </div>
+</section>
+
+<!-- INCLUDED -->
+<section class="alt">
+  <div class="wrap">
+    <h2>We Become Your White Label Delivery Team</h2>
+    <p class="lead">You sell the client. We build and run everything for them, under your agency name. Here is what we do for every client account you give us.</p>
+    <div class="inc-grid">
+      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></div><div><h3>Meta Ads Setup and Management</h3><p>We plan, launch and manage your client's campaigns every day. Audiences, budgets and testing included.</p></div></div>
+      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 15l5-5 4 4 3-3 6 6"/></svg></div><div><h3>Ad Creatives and Copy</h3><p>We write the ad copy and design the creatives for your client's offer and market.</p></div></div>
+      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h10M4 19h6"/><circle cx="18" cy="17" r="3"/></svg></div><div><h3>Funnels and Landing Pages</h3><p>We build the funnel that turns ad clicks into leads, inside your GHL.</p></div></div>
+      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l3 8M16 7.5l-3 8"/></svg></div><div><h3>GHL Build and Automation</h3><p>Pipeline, workflows, calendars, reminders and tracking. We set it up and keep it running.</p></div></div>
+      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg></div><div><h3>AI Appointment Setter, 24/7</h3><p>We build an AI setter for each client. It replies in under a minute, follows up and books calls day and night.</p></div></div>
+      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><h3>Monthly Reports Under Your Brand</h3><p>Leads, booked appointments and cost per appointment. Ready to send to your client as your own.</p></div></div>
+    </div>
+    <div class="youget">
+      <h3>What This Means for Your Agency</h3>
+      <ul class="terms">
+        <li>Your clients get more booked appointments, so they stay with you longer</li>
+        <li>Your brand on every funnel, message and report</li>
+        <li>New clients live in 7 days, without you building anything</li>
+        <li>Your time back to sell and grow</li>
+        <li>One team on Slack, WhatsApp, a shared ClickUp and a weekly call</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- AI DEMO -->
 <section class="ai-demo" id="ai">
   <div class="wrap">
-    <h2>See Our AI Book a Real Lead</h2>
-    <p class="lead">Real screenshots from one of our client accounts in GHL. The lead went quiet. The AI followed up, started the talk again and booked the call in 28 minutes.</p>
+    <h2>We Build an AI Appointment Setter for Every Client. Under Your Name.</h2>
+    <p class="lead">Most leads go cold because nobody replies fast. We fix that for your clients. We build an AI setter inside your GHL for each client. It replies in under 1 minute, follows up when leads go quiet and books calls on your client's calendar, day and night. Your client sees a full calendar and gives the credit to your agency.</p>
+    <p class="ai-proof">Here is a real lead our AI booked for one of our client accounts. The lead went quiet. The AI brought them back and booked the call in 28 minutes.</p>
     <div class="ai-real">
       <figure>
         <figcaption><span>1</span>Lead goes quiet. AI follows up.</figcaption>
@@ -486,8 +523,8 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <!-- TRACKING -->
 <section class="track" id="tracking">
   <div class="wrap">
-    <h2>We Are Measured on Appointments, Not Just Leads</h2>
-    <p class="lead">Anyone can report a lead count. We track every lead from ad click to booked appointment. So you and your client always know what the ad spend brings in.</p>
+    <h2>Your Clients See Booked Appointments, Not Just Leads</h2>
+    <p class="lead">Clients don't stay for clicks or leads. They stay when they see appointments. We track every lead from ad click to booked appointment, so your client sees what their money brings in.</p>
     <div class="track-grid">
       <figure class="tcard">
         <button type="button" data-full="assets/report-01.webp" data-title="Meta ads, leads to appointments"><img src="assets/report-01.webp" alt="Meta ads report with leads, appointments and cost per appointment" loading="lazy"></button>
@@ -499,44 +536,28 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
       </figure>
     </div>
     <div class="tnote">
-      <b>You get a monthly report for every client account.</b> Leads, booked appointments, cost per appointment and closed deals, with your agency brand on it. Ready to send to your client, so they can see the results with their own eyes.
-    </div>
-  </div>
-</section>
-
-<!-- INCLUDED -->
-<section>
-  <div class="wrap">
-    <h2>What You Get for Each Client Account</h2>
-    <p class="lead">One flat price per ad account. Everything below is included.</p>
-    <div class="inc-grid">
-      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></div><div><h3>Meta Ads Setup and Management</h3><p>Campaigns, audiences, testing and daily checks, run by a dedicated media buyer.</p></div></div>
-      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 15l5-5 4 4 3-3 6 6"/></svg></div><div><h3>Ad Creatives and Copy</h3><p>Static ads and ad copy made for your client's offer and market.</p></div></div>
-      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h10M4 19h6"/><circle cx="18" cy="17" r="3"/></svg></div><div><h3>GHL Build Inside Your Account</h3><p>Funnel, pipeline, workflows, calendars and tracking, all in your own GHL.</p></div></div>
-      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg></div><div><h3>AI Appointment Setting, 24/7</h3><p>AI replies to every lead in under a minute, answers questions and books calls on your client's calendar.</p></div></div>
-      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><h3>Monthly Reports Under Your Brand</h3><p>Leads, appointments, cost per appointment and closed deals. Ready to send to your client as your own.</p></div></div>
-      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 10h8M8 14h5"/><path d="M4 4h16v12H8l-4 4z"/></svg></div><div><h3>Direct Line to Our Team</h3><p>Slack, WhatsApp, a shared ClickUp board and a weekly call.</p></div></div>
+      <b>Every month, you get a report for each client account.</b> Leads, booked appointments and cost per appointment, with your logo and your agency name. Send it to your client and show them exactly what your agency delivered.
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section>
+<section class="alt">
   <div class="wrap">
-    <h2>How It Works</h2>
+    <h2>Start in 3 Simple Steps</h2>
     <div class="steps">
-      <div class="step"><h3>Fill the Form</h3><p>Tell us about your agency. We contact you within 24 hours.</p></div>
-      <div class="step"><h3>Give Us Access</h3><p>Pick one client. Add us to your GHL and the client's ad account. Share the offer details.</p></div>
-      <div class="step"><h3>Live in 7 Days</h3><p>Ads, funnel and AI booking go live. You get monthly reports to send to your client.</p></div>
+      <div class="step"><h3>Claim Your $97 USD Trial</h3><p>Fill the form. We call you within 24 hours to learn about your client and their offer.</p></div>
+      <div class="step"><h3>Give Us Access</h3><p>Add us to your GHL and your client's Meta ad account. That is all we need from you.</p></div>
+      <div class="step"><h3>We Go Live in 7 Days</h3><p>Ads, funnel, GHL and the AI setter go live. You get updates on Slack and a monthly report for your client.</p></div>
     </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section class="alt" id="work">
+<section id="work">
   <div class="wrap">
-    <h2>Our Work for Agencies and Their Clients</h2>
-    <p class="lead">Real screenshots from live accounts we manage. No mockups. Tap any image to see it full size.</p>
+    <h2>The Same Work We Will Do for Your Clients</h2>
+    <p class="lead">Real screenshots from live client accounts we manage. No mockups. Tap any image to see it full size.</p>
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" aria-selected="true" aria-controls="p-ads" id="t-ads">Meta Ads Results</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="p-cr" id="t-cr">Ad Creatives</button>
@@ -567,48 +588,14 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 </section>
 
 <!-- FULLY HIDDEN -->
-<section>
+<section class="alt">
   <div class="wrap">
-    <h2>Your Client Never Knows We Exist</h2>
-    <p class="lead">You stay the agency. We stay in the background.</p>
+    <h2>Your Client Will Never Know We Exist</h2>
+    <p class="lead">You stay the agency. You own the client. We work in the background and make you look good.</p>
     <div class="hidden-grid">
-      <div><b>Your brand only</b><span>Reports, emails and funnels carry your agency name, never ours.</span></div>
+      <div><b>Your brand only</b><span>Funnels, AI messages and reports carry your agency name, never ours.</span></div>
       <div><b>No client contact</b><span>We never message, call or email your client. You own the relationship.</span></div>
       <div><b>Your GHL, your data</b><span>Everything is built in your account. If you leave, it all stays with you.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="alt" id="pricing">
-  <div class="wrap">
-    <h2>Simple Price Per Ad Account</h2>
-    <div class="price-wrap">
-      <div class="trial-card">
-        <div class="big">$97 <small>USD, first month</small></div>
-        <p>Start with 1 client account. See the work and the results. If you like it, it moves to the normal price. If not, you walk away.</p>
-        <a class="btn" href="#start">Start My $97 USD Trial</a>
-      </div>
-      <div>
-        <div class="tiers">
-          <table>
-            <caption>After the trial, per ad account, per month</caption>
-            <thead><tr><th scope="col">Number of accounts</th><th scope="col">Price</th></tr></thead>
-            <tbody>
-              <tr><td>1 to 3</td><td>$275 USD</td></tr>
-              <tr><td>4 to 6</td><td>$250 USD</td></tr>
-              <tr><td>7 to 9</td><td>$225 USD</td></tr>
-              <tr><td>10 or more</td><td>$200 USD</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <ul class="terms">
-          <li>No setup fee</li>
-          <li>No contract, cancel any account any time</li>
-          <li>No minimum ad spend</li>
-          <li>Ad spend and GHL AI usage are paid by your client</li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>
@@ -616,7 +603,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <!-- REVIEWS -->
 <section>
   <div class="wrap">
-    <h2>What Agency Owners Say</h2>
+    <h2>Agency Owners Trust Us With Their Clients</h2>
     <div class="vids">
       <div class="vid"><video controls playsinline preload="none" poster="assets/video-01-poster.webp" src="assets/video-01.mp4"></video><div><b>Greg Viner</b><span>Founder, Local Online Expert, Marketing Agency</span></div></div>
       <div class="vid"><video controls playsinline preload="none" poster="assets/video-02-poster.webp" src="assets/video-02.mp4"></video><div><b>Aaron</b><span>Founder, Mustard Growth, Marketing Agency</span></div></div>
@@ -665,11 +652,56 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
   </div>
 </section>
 
+<!-- UPWORK -->
+<section class="upw alt">
+  <div class="wrap upw-grid">
+    <div>
+      <h2>Ranked Top Media Buyer in Bangladesh on Upwork</h2>
+      <p class="lead">Upwork lists our founder first on its "Hire the best Media Buyers in Bangladesh" page. 5.0 star rating from 61 jobs.</p>
+    </div>
+    <button type="button" class="upw-shot" data-full="assets/proof-01.webp" data-title="Upwork, best Media Buyers in Bangladesh"><img src="assets/proof-01.webp" alt="Upwork page, best Media Buyers in Bangladesh, Mrinmoy S. listed first with 5.0 rating and 61 jobs" loading="lazy"></button>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <h2>Simple Pricing Per Client Account</h2>
+    <div class="price-wrap">
+      <div class="trial-card">
+        <div class="big">$97 <small>USD, first month</small></div>
+        <p>Give us 1 client account for the first month. We build and run everything. If you are not happy with the work, you walk away. No contract.</p>
+        <a class="btn" href="#start">Start My $97 USD Trial</a>
+      </div>
+      <div>
+        <div class="tiers">
+          <table>
+            <caption>After the trial, per ad account, per month</caption>
+            <thead><tr><th scope="col">Number of accounts</th><th scope="col">Price</th></tr></thead>
+            <tbody>
+              <tr><td>1 to 3</td><td>$275 USD</td></tr>
+              <tr><td>4 to 6</td><td>$250 USD</td></tr>
+              <tr><td>7 to 9</td><td>$225 USD</td></tr>
+              <tr><td>10 or more</td><td>$200 USD</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="terms">
+          <li>No setup fee</li>
+          <li>No contract, cancel any account any time</li>
+          <li>No minimum ad spend</li>
+          <li>Ad spend and GHL AI usage are paid by your client</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TEAM -->
 <section class="alt">
   <div class="wrap">
     <h2>The Team Behind Your Accounts</h2>
-    <p class="lead">Infinix Online is a UK registered agency. Each account gets a media buyer, a GHL expert, a designer and a tracking specialist.</p>
+    <p class="lead">Infinix Online is a UK registered agency. Your accounts are run by media buyers, a GoHighLevel and AI specialist, a designer, a tracking specialist and a project manager.</p>
     <div class="team">
       <div class="member"><img src="assets/team-01.webp" alt="Mrinmoy Sadiq" loading="lazy"><b>Mrinmoy Sadiq</b><span>Founder and Lead Media Buyer</span></div>
       <div class="member"><img src="assets/team-02.webp" alt="Mahir M. Nahi" loading="lazy"><b>Mahir M. Nahi</b><span>GoHighLevel and AI Specialist</span></div>
@@ -701,8 +733,8 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <!-- FINAL CTA -->
 <section class="final">
   <div class="wrap">
-    <h2>Try Us on One Client for $97 USD</h2>
-    <p>No setup fee. No contract. Live in 7 days. If we are not worth it, you walk away.</p>
+    <h2>Stop Doing Everything Yourself</h2>
+    <p>Give us 1 client for $97 USD. We build the ads, funnel, GHL and AI setter under your name and go live in 7 days. If we are not worth it, you walk away.</p>
     <a class="btn" href="#start">Start My $97 USD Trial</a>
   </div>
 </section>
