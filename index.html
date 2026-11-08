@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Meta Pixel: paste your pixel code here. The form fires fbq('track','Lead') on submit if the pixel is loaded. -->
+<!-- Meta Pixel: paste your pixel code here. A Lead event fires when the Tally form is submitted, if the pixel is loaded. -->
 
 <style>
 :root{
@@ -66,6 +66,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 /* form */
 .form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 18px 40px -24px rgba(19,32,63,.45)}
 .form-card h3{margin-bottom:4px}
+.form-card iframe{display:block;width:100%;border:0;min-height:300px}
 .form-card .note{font-size:14px;margin-bottom:14px}
 .field{margin-bottom:12px}
 .field label{display:block;font-size:14px;font-weight:600;margin-bottom:5px;color:var(--ink)}
@@ -386,47 +387,10 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
     </div>
 
     <div class="form-card" id="start">
-      <form id="leadForm" novalidate>
-        <h3>Claim Your $97 USD Trial</h3>
-        <p class="note">Tell us about your Meta lead gen agency. We will call you within 24 hours and set up your first client account.</p>
-        <div class="two">
-          <div class="field">
-            <label for="name">Your name</label>
-            <input id="name" name="name" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="agency">Agency name</label>
-            <input id="agency" name="agency" autocomplete="organization" required>
-          </div>
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
-        </div>
-        <div class="field">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 555-5555" required>
-        </div>
-        <div class="field">
-          <label for="clients">How many Meta lead gen clients do you run?</label>
-          <select id="clients" name="clients" required>
-            <option value="">Select one</option>
-            <option>None yet</option>
-            <option>1 to 3</option>
-            <option>4 to 6</option>
-            <option>7 to 9</option>
-            <option>10 or more</option>
-          </select>
-        </div>
-        <input type="hidden" name="utm_source"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="page">
-        <button class="btn" type="submit" id="submitBtn">Start My $97 USD Trial</button>
-        <p class="err" id="formErr">Please fill in all fields with a valid email and phone number.</p>
-        <p class="fine">No payment now. We talk first.</p>
-      </form>
-      <div class="thanks" id="thanks">
-        <h3>Thank You, We Got Your Details</h3>
-        <p>We will contact you within 24 hours to set up your first client account. Keep your phone close.</p>
-      </div>
+      <h3>Claim Your $97 USD Trial</h3>
+      <p class="note">Tell us about your Meta lead gen agency. We will call you within 24 hours and set up your first client account.</p>
+      <iframe id="tallyForm" data-tally-src="https://tally.so/embed/KpeOyA?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0" title="Claim your $97 USD trial"></iframe>
+      <p class="fine">No payment now. We talk first.</p>
     </div>
   </div>
 </section>
@@ -796,51 +760,20 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <div class="sticky" id="sticky"><a class="btn" href="#start">Start My $97 USD Trial</a></div>
 
 <script>
-// Paste your Google Apps Script web app URL here
-var SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_URL_HERE";
+// ---------- Tally form ----------
+(function(){
+  var d=document, w="https://tally.so/widgets/embed.js",
+      v=function(){ if(typeof Tally!=="undefined"){ Tally.loadEmbeds(); } else { d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){ e.src=e.dataset.tallySrc; }); } };
+  if(typeof Tally!=="undefined"){ v(); } else if(!d.querySelector('script[src="'+w+'"]')){ var sc=d.createElement("script"); sc.src=w; sc.onload=v; sc.onerror=v; d.body.appendChild(sc); }
+  // fire Meta Pixel Lead event when the Tally form is submitted
+  window.addEventListener('message', function(e){
+    if(typeof e.data === 'string' && e.data.indexOf('Tally.FormSubmitted') !== -1){
+      try{ if(window.fbq) fbq('track','Lead'); }catch(err){}
+    }
+  });
+})();
 
 (function(){
-  var form = document.getElementById('leadForm');
-  var err = document.getElementById('formErr');
-  var btn = document.getElementById('submitBtn');
-
-  // capture UTM params
-  try{
-    var q = new URLSearchParams(location.search);
-    ['utm_source','utm_campaign','utm_content'].forEach(function(k){ form.elements[k].value = q.get(k) || ''; });
-  }catch(e){}
-  form.elements.page.value = location.href;
-
-  function valid(){
-    var ok = true;
-    ['name','agency','email','phone','clients'].forEach(function(id){
-      var el = document.getElementById(id);
-      var v = el.value.trim();
-      var good = v.length > 0;
-      if(id==='email') good = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-      if(id==='phone') good = v.replace(/\D/g,'').length >= 10;
-      el.style.borderColor = good ? '' : '#b42318';
-      if(!good) ok = false;
-    });
-    return ok;
-  }
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!valid()){ err.style.display='block'; return; }
-    err.style.display='none';
-    btn.disabled = true; btn.textContent = 'Sending...';
-    var data = new URLSearchParams(new FormData(form));
-    data.append('submitted_at', new Date().toISOString());
-    fetch(SCRIPT_URL, {method:'POST', mode:'no-cors', body:data})
-      .catch(function(){})
-      .then(function(){
-        try{ if(window.fbq) fbq('track','Lead'); }catch(e){}
-        form.style.display='none';
-        document.getElementById('thanks').style.display='block';
-      });
-  });
-
   // sticky CTA on mobile once the form is out of view
   var sticky = document.getElementById('sticky');
   var target = document.getElementById('start');
