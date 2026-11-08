@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>White Label Ads, GHL and AI Booking | Infinix Online</title>
-<meta name="description" content="White label Meta ads, GoHighLevel builds and AI appointment setting for your agency's clients. Your brand, our team. Start with one account for $97 USD.">
+<title>White Label Delivery for Meta Lead Gen Agencies | Infinix Online</title>
+<meta name="description" content="For agencies that run Meta lead gen ads for clients. White label Meta lead ads, funnels, GHL and AI appointment setting under your name. First account $97 USD.">
 <meta name="theme-color" content="#13203f">
 <link rel="icon" href="assets/brand-logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -346,6 +346,18 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 .youget{margin-top:22px;background:#fff;border:2px solid var(--ink);border-radius:var(--radius);padding:20px}
 .youget h3{margin-bottom:6px}
 .ai-proof{color:#fff;font-weight:600;margin-top:14px;max-width:720px}
+
+/* who it's for */
+.who-grid{display:grid;gap:14px;margin-top:22px}
+.who-card{border-radius:var(--radius);padding:20px;border:1.5px solid var(--line);background:#fff}
+.who-card.yes{border-color:var(--keep);background:#f2fbf5}
+.who-card h3{margin-bottom:10px}
+.who-card ul{list-style:none;display:grid;gap:10px}
+.who-card li{position:relative;padding-left:30px;color:var(--ink)}
+.who-card li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%}
+.who-card.yes li::before{background:var(--keep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-6.5' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.who-card.no li::before{background:#fde8e6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6.5 6.5l7 7M13.5 6.5l-7 7' stroke='%23b42318' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") center/20px no-repeat}
+@media (min-width:900px){.who-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -361,11 +373,12 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <h1>We Do Your Client Delivery. Under Your Agency Name.</h1>
-      <p class="sub">Meta ads, ad creatives, funnels, GHL and an AI appointment setter for every client you sign. Your clients get booked calls and stay longer. You get your time back to sell.</p>
+      <h1>Run Meta Lead Gen Ads for Clients? We Do the Delivery Under Your Name.</h1>
+      <p class="sub">We are the white label team for Meta lead gen agencies. We run your clients' Meta lead ads, creatives, funnels, GHL and an AI setter that books the leads. Your clients get booked calls and stay longer. You get your time back to sell.</p>
       <p class="trial-pill">Give us 1 client account for $97 USD for the first month</p>
       <p class="upwork-line"><span class="st">★★★★★</span><span>Ranked top Media Buyer in Bangladesh on <b>Upwork</b></span></p>
       <ul class="hero-points">
+        <li>Only for agencies running Meta lead gen ads</li>
         <li>Live in 7 days, built inside your own GHL</li>
         <li>Your brand on everything. We never talk to your client</li>
         <li>No setup fee. No contract</li>
@@ -375,7 +388,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
     <div class="form-card" id="start">
       <form id="leadForm" novalidate>
         <h3>Claim Your $97 USD Trial</h3>
-        <p class="note">Tell us about your agency. We will call you within 24 hours and set up your first client account.</p>
+        <p class="note">Tell us about your Meta lead gen agency. We will call you within 24 hours and set up your first client account.</p>
         <div class="two">
           <div class="field">
             <label for="name">Your name</label>
@@ -395,7 +408,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
           <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 555-5555" required>
         </div>
         <div class="field">
-          <label for="clients">How many active clients do you have?</label>
+          <label for="clients">How many Meta lead gen clients do you run?</label>
           <select id="clients" name="clients" required>
             <option value="">Select one</option>
             <option>None yet</option>
@@ -436,13 +449,40 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
   </div>
 </div>
 
+<!-- WHO -->
+<section class="who">
+  <div class="wrap">
+    <h2>Built Only for Meta Lead Gen Agencies</h2>
+    <p class="lead">We do one thing: deliver Meta lead gen for agencies, under their name. If that is your agency, keep reading.</p>
+    <div class="who-grid">
+      <div class="who-card yes">
+        <h3>This Is for You If</h3>
+        <ul>
+          <li>You run Meta lead ads for local or service businesses</li>
+          <li>Your clients want leads and booked calls, not online store sales</li>
+          <li>You use GoHighLevel or are ready to</li>
+          <li>You want to take more clients without hiring a team</li>
+        </ul>
+      </div>
+      <div class="who-card no">
+        <h3>This Is Not for You If</h3>
+        <ul>
+          <li>You run ecommerce or online store ads</li>
+          <li>You only do Google Ads, SEO or web design</li>
+          <li>You want a freelancer who only takes orders</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PAIN -->
 <section class="alt">
   <div class="wrap">
-    <h2>Running an Agency Should Not Feel Like This</h2>
+    <h2>Running a Meta Lead Gen Agency Should Not Feel Like This</h2>
     <ul class="pain-list">
-      <li>You close a new client, then spend the next 2 weeks building their ads, funnel and GHL yourself.</li>
-      <li>Your client gets leads, but nobody calls them back fast. Then they tell you "the leads are bad."</li>
+      <li>You close a new client, then spend the next 2 weeks building their Meta campaigns, funnel and GHL yourself.</li>
+      <li>Your Meta lead ads bring in leads, but nobody calls them back fast. Then the client says "the leads are bad."</li>
       <li>Clients cancel in month 3 or 4, right when the campaigns start to work.</li>
       <li>You hired a freelancer. Good for a month, then slow replies, then nothing.</li>
       <li>You are in Ads Manager and GHL all day, so you have no time left to sell.</li>
@@ -460,19 +500,19 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
       <li>You can't take on new clients, because delivery already eats all your time.</li>
       <li>One slow month for your client turns into a cancel email for you.</li>
     </ul>
-    <p class="agit-turn">Your sales are not the problem. Delivery and lead follow-up are. That is exactly the part we take off your plate.</p>
+    <p class="agit-turn">Your Meta ads are not the problem. Delivery and lead follow-up are. That is exactly the part we take off your plate.</p>
   </div>
 </section>
 
 <!-- INCLUDED -->
 <section class="alt">
   <div class="wrap">
-    <h2>We Become Your White Label Delivery Team</h2>
-    <p class="lead">You sell the client. We build and run everything for them, under your agency name. Here is what we do for every client account you give us.</p>
+    <h2>We Become the Delivery Team Behind Your Meta Lead Gen Agency</h2>
+    <p class="lead">You sell the client. We build and run their full Meta lead gen system, under your agency name. Here is what we do for every client account you give us.</p>
     <div class="inc-grid">
-      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></div><div><h3>Meta Ads Setup and Management</h3><p>We plan, launch and manage your client's campaigns every day. Audiences, budgets and testing included.</p></div></div>
+      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></div><div><h3>Meta Lead Ads Setup and Management</h3><p>We plan, launch and manage your client's Meta lead campaigns every day. Lead forms, audiences, budgets and testing included.</p></div></div>
       <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 15l5-5 4 4 3-3 6 6"/></svg></div><div><h3>Ad Creatives and Copy</h3><p>We write the ad copy and design the creatives for your client's offer and market.</p></div></div>
-      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h10M4 19h6"/><circle cx="18" cy="17" r="3"/></svg></div><div><h3>Funnels and Landing Pages</h3><p>We build the funnel that turns ad clicks into leads, inside your GHL.</p></div></div>
+      <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h10M4 19h6"/><circle cx="18" cy="17" r="3"/></svg></div><div><h3>Funnels and Instant Forms</h3><p>We build the landing page or instant form and send every lead straight into your GHL.</p></div></div>
       <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l3 8M16 7.5l-3 8"/></svg></div><div><h3>GHL Build and Automation</h3><p>Pipeline, workflows, calendars, reminders and tracking. We set it up and keep it running.</p></div></div>
       <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg></div><div><h3>AI Appointment Setter, 24/7</h3><p>We build an AI setter for each client. It replies in under a minute, follows up and books calls day and night.</p></div></div>
       <div class="inc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><h3>Monthly Reports Under Your Brand</h3><p>Leads, booked appointments and cost per appointment. Ready to send to your client as your own.</p></div></div>
@@ -494,7 +534,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <section class="ai-demo" id="ai">
   <div class="wrap">
     <h2>We Build an AI Appointment Setter for Every Client. Under Your Name.</h2>
-    <p class="lead">Most leads go cold because nobody replies fast. We fix that for your clients. We build an AI setter inside your GHL for each client. It replies in under 1 minute, follows up when leads go quiet and books calls on your client's calendar, day and night. Your client sees a full calendar and gives the credit to your agency.</p>
+    <p class="lead">Most Meta leads go cold because nobody replies fast. We fix that for your clients. We build an AI setter inside your GHL for each client. It replies in under 1 minute, follows up when leads go quiet and books calls on your client's calendar, day and night. Your client sees a full calendar and gives the credit to your agency.</p>
     <p class="ai-proof">Here is a real lead our AI booked for one of our client accounts. The lead went quiet. The AI brought them back and booked the call in 28 minutes.</p>
     <div class="ai-real">
       <figure>
@@ -524,7 +564,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <section class="track" id="tracking">
   <div class="wrap">
     <h2>Your Clients See Booked Appointments, Not Just Leads</h2>
-    <p class="lead">Clients don't stay for clicks or leads. They stay when they see appointments. We track every lead from ad click to booked appointment, so your client sees what their money brings in.</p>
+    <p class="lead">Clients don't stay for clicks or leads. They stay when they see appointments. We track every Meta lead from ad click to booked appointment, so your client sees what their money brings in.</p>
     <div class="track-grid">
       <figure class="tcard">
         <button type="button" data-full="assets/report-01.webp" data-title="Meta ads, leads to appointments"><img src="assets/report-01.webp" alt="Meta ads report with leads, appointments and cost per appointment" loading="lazy"></button>
@@ -556,7 +596,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <!-- PORTFOLIO -->
 <section id="work">
   <div class="wrap">
-    <h2>The Same Work We Will Do for Your Clients</h2>
+    <h2>The Same Meta Lead Gen Work We Will Do for Your Clients</h2>
     <p class="lead">Real screenshots from live client accounts we manage. No mockups. Tap any image to see it full size.</p>
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" aria-selected="true" aria-controls="p-ads" id="t-ads">Meta Ads Results</button>
@@ -566,7 +606,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
     </div>
 
     <div class="panel" role="tabpanel" id="p-ads" aria-labelledby="t-ads">
-      <p>Campaigns in home services, clinics, funding and coaching.</p>
+      <p>Meta lead gen campaigns for home services, clinics, funding and coaching.</p>
       <div class="gallery"><button type="button" data-full="assets/ads-01.webp" data-title="Men's Health Clinic"><img src="assets/ads-01-sm.webp" alt="Men's Health Clinic" loading="lazy"><span>Men's Health Clinic</span></button><button type="button" data-full="assets/ads-02.webp" data-title="Remodeling Company"><img src="assets/ads-02-sm.webp" alt="Remodeling Company" loading="lazy"><span>Remodeling Company</span></button><button type="button" data-full="assets/ads-03.webp" data-title="Kitchen and Bath"><img src="assets/ads-03-sm.webp" alt="Kitchen and Bath" loading="lazy"><span>Kitchen and Bath</span></button><button type="button" data-full="assets/ads-04.webp" data-title="Tree Service"><img src="assets/ads-04-sm.webp" alt="Tree Service" loading="lazy"><span>Tree Service</span></button><button type="button" data-full="assets/ads-05.webp" data-title="Business Funding"><img src="assets/ads-05-sm.webp" alt="Business Funding" loading="lazy"><span>Business Funding</span></button><button type="button" data-full="assets/ads-06.webp" data-title="Custom Home Builder"><img src="assets/ads-06-sm.webp" alt="Custom Home Builder" loading="lazy"><span>Custom Home Builder</span></button><button type="button" data-full="assets/ads-07.webp" data-title="Tax Business Coach"><img src="assets/ads-07-sm.webp" alt="Tax Business Coach" loading="lazy"><span>Tax Business Coach</span></button><button type="button" data-full="assets/ads-08.webp" data-title="Before and After"><img src="assets/ads-08-sm.webp" alt="Before and After" loading="lazy"><span>Before and After</span></button></div>
     </div>
     <div class="panel" role="tabpanel" id="p-cr" aria-labelledby="t-cr" hidden>
@@ -670,7 +710,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
     <div class="price-wrap">
       <div class="trial-card">
         <div class="big">$97 <small>USD, first month</small></div>
-        <p>Give us 1 client account for the first month. We build and run everything. If you are not happy with the work, you walk away. No contract.</p>
+        <p>Give us 1 Meta lead gen client for the first month. We build and run everything. If you are not happy with the work, you walk away. No contract.</p>
         <a class="btn" href="#start">Start My $97 USD Trial</a>
       </div>
       <div>
@@ -701,7 +741,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <section class="alt">
   <div class="wrap">
     <h2>The Team Behind Your Accounts</h2>
-    <p class="lead">Infinix Online is a UK registered agency. Your accounts are run by media buyers, a GoHighLevel and AI specialist, a designer, a tracking specialist and a project manager.</p>
+    <p class="lead">Infinix Online is a UK registered agency. Your clients' Meta lead gen accounts are run by media buyers, a GoHighLevel and AI specialist, a designer, a tracking specialist and a project manager.</p>
     <div class="team">
       <div class="member"><img src="assets/team-01.webp" alt="Mrinmoy Sadiq" loading="lazy"><b>Mrinmoy Sadiq</b><span>Founder and Lead Media Buyer</span></div>
       <div class="member"><img src="assets/team-02.webp" alt="Mahir M. Nahi" loading="lazy"><b>Mahir M. Nahi</b><span>GoHighLevel and AI Specialist</span></div>
@@ -718,14 +758,15 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
   <div class="wrap">
     <h2>Questions Agency Owners Ask</h2>
     <div class="faq">
+      <details><summary>Who is this for?</summary><p>Agencies that run Meta lead gen ads for their clients, mostly local and service businesses that need booked calls. We don't take ecommerce, SEO or Google Ads only work for this offer.</p></details>
       <details><summary>Will my client know you are working on their account?</summary><p>No. We never contact your client. Reports, funnels and messages use your agency name only.</p></details>
       <details><summary>Do I need my own GoHighLevel account?</summary><p>Yes. We build everything inside your GHL. That way you own the setup and the data, even if you stop working with us.</p></details>
       <details><summary>Who pays for ad spend and the AI?</summary><p>Your client pays ad spend directly to Meta. GHL AI usage cost is also paid by your client. Our fee covers the work only.</p></details>
       <details><summary>Is there a minimum ad spend?</summary><p>No minimum. We will tell you what budget makes sense for your client's market before we start.</p></details>
       <details><summary>What happens after the $97 USD trial month?</summary><p>If you are happy, the account moves to the normal price, $275 USD a month for 1 to 3 accounts. If not, you cancel. No contract.</p></details>
-      <details><summary>Which niches do you work with?</summary><p>Any niche. We have run ads for home services, clinics, med spas, mortgage, coaching, restaurants and more.</p></details>
+      <details><summary>Which client niches do you work with?</summary><p>Any lead gen niche on Meta. We have run Meta lead ads for home services, clinics, med spas, mortgage, coaching and more.</p></details>
       <details><summary>How fast can you launch?</summary><p>7 days after you give us access and the offer details.</p></details>
-      <details><summary>Do you also run Google Ads?</summary><p>This offer is for Meta ads, GHL and AI booking. Ask us on the call if you need Google Ads too.</p></details>
+      <details><summary>Do you also run Google Ads?</summary><p>This offer is only for Meta lead gen, GHL and AI booking. Ask us on the call if a client also needs Google Ads.</p></details>
     </div>
   </div>
 </section>
@@ -734,7 +775,7 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
 <section class="final">
   <div class="wrap">
     <h2>Stop Doing Everything Yourself</h2>
-    <p>Give us 1 client for $97 USD. We build the ads, funnel, GHL and AI setter under your name and go live in 7 days. If we are not worth it, you walk away.</p>
+    <p>Give us 1 Meta lead gen client for $97 USD. We build the Meta ads, funnel, GHL and AI setter under your name and go live in 7 days. If we are not worth it, you walk away.</p>
     <a class="btn" href="#start">Start My $97 USD Trial</a>
   </div>
 </section>
