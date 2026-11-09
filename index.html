@@ -11,7 +11,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Meta Pixel: paste your pixel code here. A Lead event fires when the Tally form is submitted, if the pixel is loaded. -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1156557233977888');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1156557233977888&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
 <style>
 :root{--ink:#13203f;--ink-soft:#4a5573;--lime:#b0f411;--lime-dark:#9ad80b;--red:#c0262d;--keep:#0f8a4c;--line:#dde2ee;--bg-alt:#f5f7fc;--radius:14px}
@@ -213,9 +229,19 @@ dialog.lb::backdrop{background:rgba(10,16,32,.85)}
   var d=document, w="https://tally.so/widgets/embed.js",
       v=function(){ if(typeof Tally!=="undefined"){ Tally.loadEmbeds(); } else { d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){ e.src=e.dataset.tallySrc; }); } };
   if(typeof Tally!=="undefined"){ v(); } else if(!d.querySelector('script[src="'+w+'"]')){ var sc=d.createElement("script"); sc.src=w; sc.onload=v; sc.onerror=v; d.body.appendChild(sc); }
+  // Pixel funnel events from the Tally form, then send qualified leads to the thank-you page.
+  // The Lead event fires on the thank-you page so it is counted once.
+  var started=false;
   window.addEventListener('message', function(e){
-    if(typeof e.data === 'string' && e.data.indexOf('Tally.FormSubmitted') !== -1){
-      try{ if(window.fbq) fbq('track','Lead'); }catch(err){}
+    if(typeof e.data !== 'string' || e.data.indexOf('Tally.') === -1) return;
+    var msg={}; try{ msg=JSON.parse(e.data); }catch(err){}
+    if(msg.event==='Tally.FormPageView' && !started){ started=true; try{ fbq('trackCustom','FormStarted'); }catch(err){} }
+    if(msg.event==='Tally.FormPageView' && msg.payload && msg.payload.page===3){ try{ fbq('trackCustom','ReachedContactStep'); }catch(err){} }
+    if(msg.event==='Tally.FormSubmitted'){
+      var name='';
+      try{ (msg.payload.fields||[]).forEach(function(f){ if(/name/i.test(f.title||'') && !/agency/i.test(f.title||'')) name=String(f.answer&&f.answer.value!==undefined?f.answer.value:f.answer||''); }); }catch(err){}
+      var url='thank-you.html?submitted=1'+(name?'&name='+encodeURIComponent(name.split(' ')[0]):'')+(location.search?'&'+location.search.slice(1):'');
+      setTimeout(function(){ window.location.href=url; }, 400);
     }
   });
 })();
